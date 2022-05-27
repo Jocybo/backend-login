@@ -18,8 +18,6 @@ app.use(
 );
 app.use(express.json());
 
-// added
-// let students = [];
 
 function authenticate(req, res, next) {
   // Check token present in header
@@ -34,22 +32,7 @@ function authenticate(req, res, next) {
   } else {
     res.status(401).json({ message: 'Unauthorized' });
   }
-  // if present
-  // check toen is valid
-  // if valid
-  // next()
-
-  // res.status(401).json({message : "Unauthorized"})
-  // next()
 }
-
-// Method : GET
-// route : /students
-// params :
-// Body :
-
-// Return
-// [{name : ""},{name : ""}
 
 app.post('/register', async (req, res) => {
   try {
@@ -93,9 +76,6 @@ app.post('/login', async (req, res) => {
     } else {
       res.status(401).json({ message: 'Credientials does not match' });
     }
-    // if no?
-    // throw err user not found
-    // if yes?
     await connection.close();
     // close the connection
   } catch (error) {
@@ -107,24 +87,3 @@ app.post('/login', async (req, res) => {
 app.listen(process.env.PORT || 5000, () => {
   console.log('Web server Started');
 });
-
-// What is nodejs
-// Why Nodejs
-// packages
-// OS
-// fs
-// express
-// routes
-// route params
-// Full CRUD api
-// Connecting Mongodb with Nodejs
-
-// User Registration
-// User Login
-// Recap
-
-// Wireframe
-// Design
-// API
-// HTML & CSS Convertion
-// API intergration
