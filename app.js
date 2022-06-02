@@ -34,6 +34,10 @@ function authenticate(req, res, next) {
   }
 }
 
+app.post('/home',authenticate,(res,res)=>{
+  res.json({message:"welcome home"})
+})
+
 app.post('/register', async (req, res) => {
   try {
     let connection = await mongoClient.connect(URL);
