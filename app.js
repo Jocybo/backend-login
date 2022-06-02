@@ -34,8 +34,8 @@ function authenticate(req, res, next) {
   }
 }
 
-app.post('/home',authenticate,(res,res)=>{
-  res.json({message:"welcome home"})
+app.post('/home', authenticate, (req, res) => {
+  res.json({ message: "Welcome" })
 })
 
 app.post('/register', async (req, res) => {
